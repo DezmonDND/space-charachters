@@ -1,0 +1,43 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+  font-family: "WubbaLubbaDubDub";
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.form__select {
+  display: flex;
+  gap: 10px;
+  min-height: 25px;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 5px;
+  font-family: "WubbaLubbaDubDub";
+  cursor: pointer;
+}
+
+.form__label {
+  font-family: "WubbaLubbaDubDub";
+}
+
+.form__option {
+  min-height: 20px;
+  background-color: #000000;
+}
+
+.form__input {
+  min-height: 28px;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 0 5px;
+}

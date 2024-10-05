@@ -1,0 +1,24 @@
+.results {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.results__title {
+  margin: 0 0 10px;
+}
+
+.results__items {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 10px;
+}
+
+.results__element {
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 12px;
+}
