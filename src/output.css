@@ -377,14 +377,3 @@ template {
 [hidden] {
   display: none;
 }
-
-@font-face {
-  font-family: "WubbaLubbaDubDub";
-
-  src: url(./WubbaLubbaDubDub.woff) format("woff");
-}
-
-body {
-  margin: 0;
-  font-family: "WubbaLubbaDubDub", sans-serif;
-}

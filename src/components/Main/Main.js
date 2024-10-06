@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Results from "../Results/Results";
 import SearchForm from "../SearchForm/SearchForm";
-import "./Main.css";
 import { api } from "../../utils/api";
 import Popup from "../Popup/Popup";
 
@@ -74,8 +73,8 @@ function Main() {
   }
 
   return (
-    <main className="main">
-      <h1 className="main__title">Вселенная Рик и Морти</h1>
+    <main className="flex flex-col max-w-[340px] w-full border border-white rounded-lg m-[10px] p-[20px] pt-[15px] pb-[70px]">
+      <h1 className="text-2xl font-normal mb-[20px]">Вселенная Рик и Морти</h1>
       <SearchForm
         values={values}
         handleChange={handleChange}

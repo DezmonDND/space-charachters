@@ -1,5 +1,3 @@
-import "./Results.css";
-
 function Results(props) {
   const { filteredCharacters, handleOpenPopup } = props;
 
@@ -8,14 +6,14 @@ function Results(props) {
   }
 
   return (
-    <div className="results">
-      <h4 className="results__title">Найдено</h4>
-      <ul className="results__items">
+    <div className="mt-[20px] text-left">
+      <h4 className="m-0 mb-[10px]">Найдено</h4>
+      <ul className="flex flex-col gap-[10px] max-h-[140px] overflow-y-auto no-scrollbar">
         {filteredCharacters.length !== 0 &&
           filteredCharacters.map((item) => (
             <li
               key={item.name}
-              className="results__element"
+              className="border border-white rounded p-[10px] text-xs cursor-pointer"
               onClick={() => handleClick(item)}
             >
               {`${item.name}, ${item.gender}, ${item.species}, ${item.status}`}
