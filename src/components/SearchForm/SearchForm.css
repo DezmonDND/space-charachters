@@ -3,7 +3,6 @@
   flex-direction: column;
   gap: 12px;
   text-align: left;
-  font-family: "WubbaLubbaDubDub";
 }
 
 .form__field {
@@ -20,12 +19,7 @@
   background-color: #000000;
   color: #ffffff;
   border-radius: 5px;
-  font-family: "WubbaLubbaDubDub";
   cursor: pointer;
-}
-
-.form__label {
-  font-family: "WubbaLubbaDubDub";
 }
 
 .form__option {
@@ -40,4 +34,10 @@
   border: 1px solid #ffffff;
   border-radius: 5px;
   padding: 0 5px;
+}
+
+@media screen and (max-width: 227px) {
+  .form__select {
+    flex-direction: column;
+  }
 }

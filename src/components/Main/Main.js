@@ -3,11 +3,23 @@ import Results from "../Results/Results";
 import SearchForm from "../SearchForm/SearchForm";
 import "./Main.css";
 import { api } from "../../utils/api";
+import Popup from "../Popup/Popup";
 
 function Main() {
   const [characters, setCharacters] = useState([]);
   const [filteredCharacters, setFilteredCharacters] = useState([]);
   const [values, setValues] = useState({});
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedCharacter, setSelectedCharachter] = useState({});
+
+  function handleOpenPopup(character) {
+    setIsOpen(true);
+    setSelectedCharachter(character);
+  }
+
+  function closePopup() {
+    setIsOpen(false);
+  }
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -69,7 +81,17 @@ function Main() {
         handleChange={handleChange}
         findCharacters={findCharacters}
       ></SearchForm>
-      <Results filteredCharacters={filteredCharacters}></Results>
+      <Results
+        filteredCharacters={filteredCharacters}
+        isOpen={isOpen}
+        onClose={closePopup}
+        handleOpenPopup={handleOpenPopup}
+      ></Results>
+      <Popup
+        isOpen={isOpen}
+        onClose={closePopup}
+        selectedCharacter={selectedCharacter}
+      ></Popup>
     </main>
   );
 }

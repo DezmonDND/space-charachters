@@ -52,7 +52,7 @@ function SearchForm(props) {
               Dead
             </option>
             <option className="form__option" value="unknown">
-              unknown
+              Unknown
             </option>
           </select>
         </div>
@@ -63,7 +63,7 @@ function SearchForm(props) {
           <select
             className="form__select"
             onChange={handleChange}
-            value={values.type}
+            value={values.type || ""}
             id="type"
             name="type"
           >
