@@ -1,5 +1,3 @@
-import "./SearchForm.css";
-
 function SearchForm(props) {
   const { values, handleChange, findCharacters } = props;
 
@@ -18,11 +16,15 @@ function SearchForm(props) {
   }
 
   return (
-    <form className="form" onSubmit={handleSubmit} onKeyDown={pressEnter}>
-      <div className="form__field">
+    <form
+      className="flex flex-col gap-[12px] text-left"
+      onSubmit={handleSubmit}
+      onKeyDown={pressEnter}
+    >
+      <div className="flex flex-col gap-[5px] w-full">
         <label htmlFor="name">Имя персонажа</label>
         <input
-          className="form__input"
+          className="min-h-[28px] bg-black text-white border rounded px-[5px]"
           onChange={handleChange}
           name="name"
           value={values.name || ""}
@@ -30,51 +32,51 @@ function SearchForm(props) {
           placeholder="Введите имя персонажа"
         ></input>
       </div>
-      <div className="form__select-dropdown">
-        <div className="form__field">
+      <div className="flex flex-col  gap-[10px] cursor-pointer sm:flex-row">
+        <div className="flex flex-col gap-[5px] w-full">
           <label htmlFor="status">Жив?</label>
           <select
-            className="form__select"
+            className="flex gap-[10px] min-h-[25px] bg-black border rounded cursor-pointer text-white"
             onChange={handleChange}
             value={values.status || ""}
             id="status"
             name="status"
           >
             <option selected disabled hidden></option>
-            <option className="form__option" value="Alive">
+            <option className="min-h-5 bg-black" value="Alive">
               Alive
             </option>
-            <option className="form__option" value="Dead">
+            <option className="min-h-5 bg-black" value="Dead">
               Dead
             </option>
-            <option className="form__option" value="unknown">
+            <option className="min-h-5 bg-black" value="unknown">
               Unknown
             </option>
           </select>
         </div>
-        <div className="form__field">
+        <div className="flex flex-col gap-[5px] w-full">
           <label htmlFor="type">Раса</label>
           <select
-            className="form__select"
+            className="flex gap-[10px] min-h-[25px] bg-black border rounded cursor-pointer text-white"
             onChange={handleChange}
             value={values.type || ""}
             id="type"
             name="type"
           >
             <option selected disabled hidden></option>
-            <option className="form__option" value="Human">
+            <option className="min-h-5 bg-black" value="Human">
               Human
             </option>
-            <option className="form__option" value="Alien">
+            <option className="min-h-5 bg-black" value="Alien">
               Alien
             </option>
           </select>
         </div>
       </div>
-      <div className="form__field">
+      <div className="flex flex-col gap-[5px] w-full">
         <label htmlFor="episode">Эпизод</label>
         <input
-          className="form__input"
+          className="min-h-[28px] bg-black text-white border rounded px-[5px]"
           onChange={handleChange}
           name="episode"
           value={values.episode || ""}

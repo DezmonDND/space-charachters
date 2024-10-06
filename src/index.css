@@ -1,2 +1,39 @@
-@import url(./vendor/normalize.css);
-@import url(./vendor/fonts/fonts.css);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Comfort";
+    src: url(./vendor/fonts/ComforterBrush-Regular.woff) format("woff");
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .popup {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.1s, opacity 0.3s;
+  }
+
+  .popup_opened {
+    visibility: visible;
+    opacity: 1;
+  }
+}

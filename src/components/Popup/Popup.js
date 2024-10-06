@@ -1,5 +1,3 @@
-import "./Popup.css";
-
 function Popup(props) {
   const { isOpen, onClose, selectedCharacter } = props;
 
@@ -12,15 +10,17 @@ function Popup(props) {
         }
       }}
     >
-      <div className="popup__container">
-        <h2 className="popup__title">Вселенная Рик и Морти</h2>
-        <ul className="popup__content">
-          <li className="popup__element">{`Персонаж: ${selectedCharacter.name}`}</li>
-          <li className="popup__element">{`Статус: ${selectedCharacter.status}`}</li>
-          <li className="popup__element">{`Раса: ${selectedCharacter.species}`}</li>
-          <li className="popup__element">
+      <div className="flex flex-col max-w-[340px] w-full bg-black border border-white rounded-lg m-[10px] p-[20px] pt-[15px]">
+        <h2 className="text-2xl font-normal mb-[20px]">
+          Вселенная Рик и Морти
+        </h2>
+        <ul>
+          <li className="mb-[10px]">{`Персонаж: ${selectedCharacter.name}`}</li>
+          <li className="mb-[10px]">{`Статус: ${selectedCharacter.status}`}</li>
+          <li className="mb-[10px]">{`Раса: ${selectedCharacter.species}`}</li>
+          <li className="mb-[10px]">
             <img
-              className="popup__image"
+              className="max-w-[300px] w-full object-cover object-center rounded"
               src={selectedCharacter.image}
               alt={`Аватар ${selectedCharacter.name}`}
             ></img>
