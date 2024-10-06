@@ -12,6 +12,12 @@
   width: 100%;
 }
 
+.form__select-dropdown {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+
 .form__select {
   display: flex;
   gap: 10px;
@@ -37,7 +43,7 @@
 }
 
 @media screen and (max-width: 227px) {
-  .form__select {
+  .form__select-dropdown {
     flex-direction: column;
   }
 }

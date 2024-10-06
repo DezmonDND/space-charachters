@@ -20,9 +20,7 @@ function SearchForm(props) {
   return (
     <form className="form" onSubmit={handleSubmit} onKeyDown={pressEnter}>
       <div className="form__field">
-        <label className="form__label" htmlFor="name">
-          Имя персонажа
-        </label>
+        <label htmlFor="name">Имя персонажа</label>
         <input
           className="form__input"
           onChange={handleChange}
@@ -32,11 +30,9 @@ function SearchForm(props) {
           placeholder="Введите имя персонажа"
         ></input>
       </div>
-      <div className="form__select">
+      <div className="form__select-dropdown">
         <div className="form__field">
-          <label className="form__label" htmlFor="status">
-            Жив?
-          </label>
+          <label htmlFor="status">Жив?</label>
           <select
             className="form__select"
             onChange={handleChange}
@@ -57,9 +53,7 @@ function SearchForm(props) {
           </select>
         </div>
         <div className="form__field">
-          <label className="form__label" htmlFor="type">
-            Раса
-          </label>
+          <label htmlFor="type">Раса</label>
           <select
             className="form__select"
             onChange={handleChange}
@@ -78,9 +72,7 @@ function SearchForm(props) {
         </div>
       </div>
       <div className="form__field">
-        <label className="form__label" htmlFor="episode">
-          Эпизод
-        </label>
+        <label htmlFor="episode">Эпизод</label>
         <input
           className="form__input"
           onChange={handleChange}
