@@ -8,6 +8,7 @@ module.exports = {
     },
     screens: {
       sm: "227px",
+      customvh: {'raw': '(max-height: 495px)'}
     },
   },
   plugins: [],
