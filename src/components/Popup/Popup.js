@@ -10,7 +10,7 @@ function Popup(props) {
         }
       }}
     >
-      <div className="flex flex-col max-w-[340px] w-full bg-black border border-white rounded-lg m-[10px] p-[20px] pt-[15px]">
+      <div className="flex flex-col max-w-[340px] w-full bg-black border border-white rounded-lg m-[10px] p-[20px] pt-[15px] text-left">
         <h2 className="text-2xl font-normal mb-[20px]">
           Вселенная Рик и Морти
         </h2>
