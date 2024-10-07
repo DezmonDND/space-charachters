@@ -7,7 +7,7 @@ module.exports = {
       sans: ["Comfort", "sans-serif"],
     },
     screens: {
-      'sm': '227px',
+      sm: "227px",
     },
   },
   plugins: [],
