@@ -36,7 +36,7 @@ function SearchForm(props) {
         <div className="flex flex-col gap-[5px] w-full">
           <label htmlFor="status">Жив?</label>
           <select
-            className="flex gap-[10px] min-h-[25px] bg-black border rounded cursor-pointer text-white"
+            className="flex gap-[10px] min-h-[25px] bg-black border rounded cursor-pointer text-white select-arrow"
             onChange={handleChange}
             value={values.status || ""}
             id="status"
@@ -57,7 +57,7 @@ function SearchForm(props) {
         <div className="flex flex-col gap-[5px] w-full">
           <label htmlFor="type">Раса</label>
           <select
-            className="flex gap-[10px] min-h-[25px] bg-black border rounded cursor-pointer text-white"
+            className="flex gap-[10px] min-h-[25px] bg-black border rounded cursor-pointer text-white select-arrow"
             onChange={handleChange}
             value={values.type || ""}
             id="type"

@@ -36,4 +36,13 @@
     visibility: visible;
     opacity: 1;
   }
+
+  .select-arrow {
+    appearance: none;
+    background-image: url(../src/images/triangle.svg);
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: 95%;
+    padding: 0 5px;
+  }
 }
