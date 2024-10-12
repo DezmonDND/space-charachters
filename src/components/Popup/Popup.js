@@ -1,5 +1,6 @@
 function Popup(props) {
   const { isOpen, onClose, selectedCharacter } = props;
+  console.log(selectedCharacter);
 
   return (
     <div
@@ -15,7 +16,13 @@ function Popup(props) {
           Вселенная Рик и Морти
         </h2>
         <ul>
-          <li className="mb-[10px]">{`Персонаж: ${selectedCharacter.name}`}</li>
+          <li className="mb-[10px]">
+            <a
+              href={selectedCharacter.url}
+              className=" hover:opacity-50"
+              target="blank"
+            >{`Персонаж: ${selectedCharacter.name}`}</a>
+          </li>
           <li className="mb-[10px]">{`Статус: ${selectedCharacter.status}`}</li>
           <li className="mb-[10px]">{`Раса: ${selectedCharacter.species}`}</li>
           <li className="mb-[10px]">

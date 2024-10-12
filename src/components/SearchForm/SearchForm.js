@@ -43,6 +43,9 @@ function SearchForm(props) {
             name="status"
           >
             <option selected disabled hidden></option>
+            <option className="min-h-5 bg-black" value="">
+              Все
+            </option>
             <option className="min-h-5 bg-black" value="Alive">
               Alive
             </option>
@@ -64,6 +67,9 @@ function SearchForm(props) {
             name="type"
           >
             <option selected disabled hidden></option>
+            <option className="min-h-5 bg-black" value="">
+              Все
+            </option>
             <option className="min-h-5 bg-black" value="Human">
               Human
             </option>
